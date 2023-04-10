@@ -20,8 +20,9 @@ class Respirador:
         self.ligado = False
 
     def get_status(self):
-        return {
-        "irpm": self.irpm,
-        "volume_corrente": self.volume_corrente,
-        "ligado": self.ligado
+        return { "respirador": {
+            "irpm": self.irpm,
+            "volume_corrente": self.volume_corrente,
+            "ligado": self.ligado
+        }
     }
