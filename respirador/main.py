@@ -8,6 +8,10 @@ respirador = Respirador()
 def read_root():
     return {"message": "respirador"}
 
+@app.get("/health")
+def health_check():
+    return {"status": "ok"}
+
 @app.get("/status")
 def check_status():
     return respirador.get_status()
